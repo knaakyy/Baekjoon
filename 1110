@@ -1,0 +1,21 @@
+#include <stdio.h>
+main() {
+	int N, result;
+	int count = 0;
+	int A, B, C, D;
+
+	scanf("%d", &N);
+	result = N;
+
+	while (1) {
+		A = N / 10;
+		B = N % 10;
+		C = (A + B) % 10;
+		D = 10 * B + C;
+		N = D;
+		count++;
+		if (D == result)
+			break;
+	}
+	printf("%d", count);
+}
