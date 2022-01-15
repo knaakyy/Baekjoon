@@ -1,0 +1,11 @@
+#include <stdio.h>
+main(){
+	int N, X, value, i;
+	scanf("%d %d", &N, &X);
+	for (i = 0; i < N; ++i) {
+		scanf("%d", &value);
+		if (value < X)
+			printf("%d ", value);
+	}
+	return 0;
+}
