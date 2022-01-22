@@ -1,0 +1,23 @@
+#include <stdio.h>
+main(){
+	int A, B, C, total;
+	int num[10] = {0, };
+	int i, rest;
+	
+	scanf("%d", &A);
+	scanf("%d", &B);
+	scanf("%d", &C);
+	
+	total = A * B * C;
+	
+	while (total > 0) {
+		rest = total % 10;
+		total = total / 10;
+		num[rest]++;
+	}
+
+	for (i = 0; i < 10; i++) {
+		printf("%d\n", num[i]);
+	}
+	return 0;
+}
